@@ -54,7 +54,7 @@ const Pricing = ({ language }: PricingProps) => {
   };
 
   return (
-    <section id="pricing" className="py-16 bg-gray-50">
+    <section id="pricing" className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -66,9 +66,9 @@ const Pricing = ({ language }: PricingProps) => {
         </div>
         
         <div className="max-w-lg mx-auto">
-          <Card className="border-2 border-blue-200 shadow-xl relative">
+          <Card className="border-2 border-purple-200 shadow-xl relative">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
                 <Star className="h-4 w-4 mr-1" />
                 Popular Choice
               </div>
@@ -77,7 +77,7 @@ const Pricing = ({ language }: PricingProps) => {
             <CardHeader className="text-center pt-8">
               <CardTitle className="text-2xl font-bold text-gray-900">AI Agent</CardTitle>
               <div className="mt-4">
-                <span className="text-5xl font-bold text-blue-600">{content[language].price}</span>
+                <span className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].price}</span>
                 <span className="text-gray-600 ml-2">{content[language].period}</span>
               </div>
               <p className="text-red-600 font-medium mt-2">{content[language].setup}</p>
@@ -94,7 +94,7 @@ const Pricing = ({ language }: PricingProps) => {
                 ))}
               </ul>
               
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg mb-4">
+              <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 text-lg mb-4">
                 {content[language].cta}
               </Button>
               

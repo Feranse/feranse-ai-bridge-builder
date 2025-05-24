@@ -96,11 +96,11 @@ const Features = ({ language }: FeaturesProps) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content[language].features.map((feature, index) => (
-            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300 hover:border-purple-200">
               <CardHeader>
                 <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg">
-                    <feature.icon className="h-6 w-6 text-blue-600" />
+                  <div className="p-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
+                    <feature.icon className="h-6 w-6 text-purple-600" />
                   </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-center text-gray-900">

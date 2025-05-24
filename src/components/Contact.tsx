@@ -67,15 +67,15 @@ const Contact = ({ language }: ContactProps) => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-blue-600" />
+                  <Mail className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.email}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-blue-600" />
+                  <Phone className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.phone}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-blue-600" />
+                  <MapPin className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.address}</span>
                 </div>
                 <div className="pt-4 border-t border-gray-200">
@@ -112,7 +112,7 @@ const Contact = ({ language }: ContactProps) => {
                     rows={4}
                     className="w-full resize-none"
                   />
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600">
                     {content[language].form.submit}
                   </Button>
                 </form>

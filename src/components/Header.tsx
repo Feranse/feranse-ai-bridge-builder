@@ -38,18 +38,25 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-600">{content[language].company}</h1>
+            <div className="flex items-center mr-3">
+              <img 
+                src="/lovable-uploads/881bb723-cfdb-4f6f-8de3-95f3647069fe.png" 
+                alt="Feranse Logo" 
+                className="h-8 w-8"
+              />
+            </div>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].company}</h1>
             <span className="ml-2 text-sm text-gray-500">Montreal, QC</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.features}
             </a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.pricing}
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.contact}
             </a>
           </nav>
@@ -64,7 +71,7 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
               <Globe className="h-4 w-4" />
               <span className="text-sm font-medium">{language.toUpperCase()}</span>
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white">
               {content[language].cta}
             </Button>
           </div>
