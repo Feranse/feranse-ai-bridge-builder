@@ -1,0 +1,116 @@
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Check, Star } from "lucide-react";
+
+interface PricingProps {
+  language: 'en' | 'fr';
+}
+
+const Pricing = ({ language }: PricingProps) => {
+  const content = {
+    en: {
+      title: "Simple, Transparent Pricing",
+      subtitle: "One price, unlimited possibilities",
+      price: "$700",
+      period: "per agent/month",
+      setup: "$5,000 initial setup fee",
+      commitment: "Minimum 1-year contract",
+      features: [
+        "24/7 AI Agent Operations",
+        "ERP System Integration",
+        "Custom Process Automation", 
+        "Real-time Monitoring & Analytics",
+        "Canadian Data Compliance",
+        "Dedicated Support Team",
+        "Regular Updates & Improvements",
+        "Multi-language Support"
+      ],
+      cta: "Start Your Digital Transformation",
+      contact: "Contact for Enterprise Pricing",
+      fineprint: "* All prices in CAD. Setup fee applies to initial deployment and configuration. Minimum 12-month contract required."
+    },
+    fr: {
+      title: "Tarification Simple et Transparente",
+      subtitle: "Un prix, des possibilités illimitées",
+      price: "700$",
+      period: "par agent/mois",
+      setup: "5 000$ de frais de configuration initiale",
+      commitment: "Contrat minimum d'un an",
+      features: [
+        "Opérations d'Agent IA 24/7",
+        "Intégration de Système ERP",
+        "Automatisation de Processus Personnalisée",
+        "Surveillance et Analyses en Temps Réel",
+        "Conformité aux Données Canadiennes",
+        "Équipe de Support Dédiée",
+        "Mises à Jour et Améliorations Régulières",
+        "Support Multilingue"
+      ],
+      cta: "Commencez Votre Transformation Numérique",
+      contact: "Contactez pour la Tarification Entreprise",
+      fineprint: "* Tous les prix en CAD. Des frais de configuration s'appliquent au déploiement et à la configuration initiaux. Contrat minimum de 12 mois requis."
+    }
+  };
+
+  return (
+    <section id="pricing" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {content[language].title}
+          </h2>
+          <p className="text-lg text-gray-600">
+            {content[language].subtitle}
+          </p>
+        </div>
+        
+        <div className="max-w-lg mx-auto">
+          <Card className="border-2 border-blue-200 shadow-xl relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                <Star className="h-4 w-4 mr-1" />
+                Popular Choice
+              </div>
+            </div>
+            
+            <CardHeader className="text-center pt-8">
+              <CardTitle className="text-2xl font-bold text-gray-900">AI Agent</CardTitle>
+              <div className="mt-4">
+                <span className="text-5xl font-bold text-blue-600">{content[language].price}</span>
+                <span className="text-gray-600 ml-2">{content[language].period}</span>
+              </div>
+              <p className="text-red-600 font-medium mt-2">{content[language].setup}</p>
+              <p className="text-sm text-gray-500 mt-1">{content[language].commitment}</p>
+            </CardHeader>
+            
+            <CardContent className="pt-4">
+              <ul className="space-y-3 mb-8">
+                {content[language].features.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg mb-4">
+                {content[language].cta}
+              </Button>
+              
+              <p className="text-center text-gray-600 text-sm mb-4">
+                {content[language].contact}
+              </p>
+              
+              <p className="text-xs text-gray-500 text-center leading-relaxed">
+                {content[language].fineprint}
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;
