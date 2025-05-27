@@ -16,7 +16,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         description: "Our first customer migrated their ERP and MRP systems to the cloud, integrating each platform's APIs. However, a key business process—synchronizing purchase order (PO) updates between their ERP and their MRP system—still required manual double entry.",
         details: [
           "ERP: Oracle Cloud",
-          "MRP: aSa Studio", 
+          "MRP: Domain Specific Software", 
           "Gap: PO updates in ERP were not pushed to MRP, causing delays and data discrepancies"
         ]
       },
