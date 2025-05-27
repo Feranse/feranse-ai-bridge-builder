@@ -28,14 +28,14 @@ const Pricing = ({ language }: PricingProps) => {
       ],
       cta: "Start Your Digital Transformation",
       contact: "Contact for Enterprise Pricing",
-      fineprint: "* All prices in CAD. Setup fee applies to initial deployment and configuration. Minimum 12-month contract required."
+      fineprint: "* All prices in CAD."
     },
     fr: {
       title: "Tarification Simple et Transparente",
       subtitle: "Un prix, des possibilités illimitées",
       price: "1 000$",
       period: "par agent/mois",
-      setup: "5 000$ de frais de configuration initiale",
+      setup: "5 000$ de frais de configuration initiale par nouveau client",
       commitment: "Contrat minimum d'un an",
       features: [
         "Opérations d'Agent IA 24/7",
@@ -49,7 +49,7 @@ const Pricing = ({ language }: PricingProps) => {
       ],
       cta: "Commencez Votre Transformation Numérique",
       contact: "Contactez pour la Tarification Entreprise",
-      fineprint: "* Tous les prix en CAD. Des frais de configuration s'appliquent au déploiement et à la configuration initiaux. Contrat minimum de 12 mois requis."
+      fineprint: "* Tous les prix en CAD."
     }
   };
 
