@@ -14,7 +14,7 @@ const Pricing = ({ language }: PricingProps) => {
       subtitle: "One price, unlimited possibilities",
       price: "$1,000",
       period: "per agent/month",
-      setup: "$5,000 initial setup fee",
+      setup: "$5,000 initial setup fee for new customers",
       commitment: "Minimum 1-year contract",
       features: [
         "24/7 AI Agent Operations",
