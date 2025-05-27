@@ -131,7 +131,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
                   ))}
                 </ul>
               </div>
-              <p className="text-sm text-gray-600">{content[language].solution.deployment}</p>
+              {/* <p className="text-sm text-gray-600">{content[language].solution.deployment}</p> */}
             </CardContent>
           </Card>
 
