@@ -16,7 +16,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         description: "Our first customer migrated their ERP and MRP systems to the cloud, integrating each platform's APIs. However, a key business process—synchronizing purchase order (PO) updates between their ERP and their MRP system—still required manual double entry.",
         details: [
           "ERP: Oracle Cloud",
-          "MRP: Third-party MRP Software", 
+          "MRP: aSa Studio", 
           "Gap: PO updates in ERP were not pushed to MRP, causing delays and data discrepancies"
         ]
       },
@@ -25,8 +25,8 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         objective: "Ensure every PO update in Oracle ERP is automatically replicated in the MRP system.",
         design: [
           "Listens to PO change events in Oracle via API webhooks",
-          "Transforms and validates data to match MRP API requirements",
-          "Executes secured API calls to update the MRP system"
+          "Transforms and validates data to match MRP requirements",
+          "Extracts data from ERP with secured API calls to update the MRP system"
         ],
         deployment: "Hosted on Feranse's backend with enterprise-grade security and role-based access with audit logging for compliance."
       },
@@ -34,9 +34,9 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         title: "Results & Value",
         achievements: [
           "Complete Automation: Zero manual data entry for PO updates",
-          "Less strained resources limiting the POs",
+          "Give time back to your resources to focus on value added tasks",
           "Accuracy & Compliance: Eliminated human errors and ensured audit trails",
-          "Cost Efficiency: $1000/month for the agent versus a new RPA platform and maintenance costs"
+          "Cost Efficiency: $1000/month per agent automation versus a new RPA platform with integration and maintenance costs"
         ]
       },
       cta: "Ready to Automate Your Workflow?"
@@ -156,7 +156,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           </Card>
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             {content[language].cta}
           </h3>
@@ -166,7 +166,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
               : "Partenariat avec Feranse pour concevoir vos agents IA sur mesure—contactez-nous à contact@feranse.com ou visitez www.feranse.com pour planifier un appel de découverte."
             }
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
