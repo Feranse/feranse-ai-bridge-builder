@@ -36,7 +36,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           "Complete Automation: Zero manual data entry for PO updates",
           "Give time back to your resources to focus on value added tasks",
           "Accuracy & Compliance: Eliminated human errors and ensured audit trails",
-          "Cost Efficiency: $1000/month per agent automation versus a new RPA platform with integration and maintenance costs"
+          "Cost Efficiency: $1000/month per automation versus a new RPA platform with integration and maintenance costs"
         ]
       },
       cta: "Ready to Automate Your Workflow?"
