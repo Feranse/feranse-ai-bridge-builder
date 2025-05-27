@@ -21,7 +21,6 @@ const Pricing = ({ language }: PricingProps) => {
         "ERP System Integration",
         "Custom Process Automation", 
         "Real-time Monitoring & Analytics",
-        "Canadian Data Compliance",
         "Dedicated Support Team",
         "Regular Updates & Improvements",
         "Multi-language Support"
@@ -101,9 +100,9 @@ const Pricing = ({ language }: PricingProps) => {
                 {content[language].cta}
               </Button>
               
-              <p className="text-center text-gray-600 text-sm mb-4">
+              {/* <p className="text-center text-gray-600 text-sm mb-4">
                 {content[language].contact}
-              </p>
+              </p> */}
               
               <p className="text-xs text-gray-500 text-center leading-relaxed">
                 {content[language].fineprint}
