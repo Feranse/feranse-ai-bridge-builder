@@ -34,7 +34,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         title: "Results & Value",
         achievements: [
           "Complete Automation: Zero manual data entry for PO updates",
-          "Give time back to your resources to focus on value added tasks",
+          "Productivity: Gives time back to resources to focus on value added tasks",
           "Accuracy & Compliance: Eliminated human errors and ensured audit trails",
           "Cost Efficiency: $1000/month per automation versus a new RPA platform with integration and maintenance costs"
         ]
