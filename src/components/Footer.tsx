@@ -21,7 +21,7 @@ const Footer = ({ language }: FooterProps) => {
       }
     },
     fr: {
-      company: "Feranse", 
+      company: "Feranse Inc.", 
       tagline: "Agence IA - Montréal, Québec",
       description: "Combler les lacunes de la transformation numérique avec des solutions d'automatisation alimentées par l'IA.",
       copyright: "© 2025 Feranse. Tous droits réservés.",
