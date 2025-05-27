@@ -46,12 +46,12 @@ const Footer = ({ language }: FooterProps) => {
               <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
                 {content[language].links.privacy}
               </a>
-              <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
+              {/* <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
                 {content[language].links.terms}
-              </a>
-              <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">
+              </a> */}
+              {/* <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">
                 {content[language].links.contact}
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
