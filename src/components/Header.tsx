@@ -42,11 +42,11 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
               <img 
                 src="/lovable-uploads/881bb723-cfdb-4f6f-8de3-95f3647069fe.png" 
                 alt="Feranse Logo" 
-                className="h-8 w-8"
+                className="h-10 w-8"
               />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].company}</h1>
-            <span className="ml-2 text-sm text-gray-500">Montreal, QC</span>
+            {/* <span className="ml-2 text-sm text-gray-500">Montreal, QC</span> */}
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
