@@ -42,7 +42,7 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
               <img 
                 src="/lovable-uploads/881bb723-cfdb-4f6f-8de3-95f3647069fe.png" 
                 alt="Feranse Logo" 
-                className="h-9 w-9"
+                className="h-11 w-10"
               />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].company}</h1>
