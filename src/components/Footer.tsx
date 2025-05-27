@@ -10,7 +10,7 @@ const Footer = ({ language }: FooterProps) => {
 
   const content = {
     en: {
-      company: "Feranse",
+      company: "Feranse Inc.",
       tagline: "AI Agency - Montreal, Quebec",
       description: "Bridging digital transformation gaps with AI-powered automation solutions.",
       copyright: "© 2025 Feranse. All rights reserved.",
