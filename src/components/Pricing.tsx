@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
@@ -32,16 +31,15 @@ const Pricing = ({ language }: PricingProps) => {
     fr: {
       title: "Tarification Simple et Transparente",
       subtitle: "Un prix, des possibilités illimitées",
-      price: "1 000$",
+      price: "1 000 $",
       period: "par agent/mois",
-      setup: "5 000$ de frais de configuration initiale par nouveau client",
+      setup: "5 000 $ de frais de configuration initiale pour nouveaux clients",
       commitment: "Contrat minimum d'un an",
       features: [
         "Opérations d'Agent IA 24/7",
         "Intégration de Système ERP",
         "Automatisation de Processus Personnalisée",
         "Surveillance et Analyses en Temps Réel",
-        "Conformité aux Données Canadiennes",
         "Équipe de Support Dédiée",
         "Mises à Jour et Améliorations Régulières",
         "Support Multilingue"

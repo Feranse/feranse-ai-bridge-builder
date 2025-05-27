@@ -43,36 +43,36 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
     },
     fr: {
       title: "Histoire de Succès Client",
-      subtitle: "Comment nous avons automatisé la synchronisation des BP entre les systèmes ERP et MRP",
+      subtitle: "Comment nous avons automatisé la synchronisation des bons de commande entre les systèmes ERP et MRP",
       challenge: {
         title: "Défi",
-        description: "Notre premier client a migré ses systèmes ERP et MRP vers le cloud, en intégrant les API de chaque plateforme. Cependant, un processus métier clé—la synchronisation des mises à jour de bons de commande (BP) entre leur ERP et leur système MRP—nécessitait encore une double saisie manuelle.",
+        description: "Notre premier client a migré ses systèmes ERP et MRP vers le cloud, en intégrant les API de chaque plateforme. Cependant, un processus métier clé—la synchronisation des mises à jour de bons de commande (BC) entre leur ERP et leur système MRP—nécessitait encore une double saisie manuelle.",
         details: [
-          "ERP: Oracle Cloud",
-          "MRP: Logiciel MRP tiers",
-          "Lacune: Les mises à jour de BP dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
+          "ERP : Oracle Cloud",
+          "MRP : Logiciel Spécialisé par Domaine",
+          "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
         ]
       },
       solution: {
-        title: "Solution: L'Agent de Synchronisation BP",
-        objective: "Assurer que chaque mise à jour de BP dans Oracle ERP soit automatiquement répliquée dans le système MRP.",
+        title: "Solution : L'Agent de Synchronisation BC",
+        objective: "Assurer que chaque mise à jour de BC dans Oracle ERP soit automatiquement répliquée dans le système MRP.",
         design: [
-          "Écoute les événements de changement de BP dans Oracle via des webhooks API",
-          "Transforme et valide les données pour correspondre aux exigences de l'API MRP",
-          "Exécute des appels API sécurisés pour mettre à jour le système MRP"
+          "Écoute les événements de changement de BC dans Oracle via des webhooks API",
+          "Transforme et valide les données pour correspondre aux exigences MRP",
+          "Extrait les données de l'ERP avec des appels API sécurisés pour mettre à jour le système MRP"
         ],
         deployment: "Hébergé sur le backend de Feranse avec une sécurité de niveau entreprise et un accès basé sur les rôles avec journalisation d'audit pour la conformité."
       },
       results: {
         title: "Résultats et Valeur",
         achievements: [
-          "Automatisation Complète: Zéro saisie manuelle de données pour les mises à jour de BP",
-          "Ressources moins sollicitées limitant les BP",
-          "Précision et Conformité: Élimination des erreurs humaines et assurance de pistes d'audit",
-          "Efficacité des Coûts: 1000$/mois pour l'agent versus une nouvelle plateforme RPA et les coûts de maintenance"
+          "Automatisation Complète : Zéro saisie manuelle de données pour les mises à jour de BC",
+          "Productivité : Redonne du temps aux ressources pour se concentrer sur les tâches à valeur ajoutée",
+          "Précision et Conformité : Élimination des erreurs humaines et assurance de pistes d'audit",
+          "Efficacité des Coûts : 1000$/mois par automatisation versus une nouvelle plateforme RPA avec les coûts d'intégration et de maintenance"
         ]
       },
-      cta: "Prêt à Automatiser Votre Flux de Travail?"
+      cta: "Prêt à Automatiser Votre Flux de Travail ?"
     }
   };
 

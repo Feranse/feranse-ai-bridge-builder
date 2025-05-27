@@ -65,12 +65,12 @@ const PrivacyPolicyDialog = ({ open, onOpenChange, language }: PrivacyPolicyDial
     },
     fr: {
       title: "Politique de Confidentialité et de Vie Privée",
-      lastUpdated: "Dernière mise à jour: 27 mai 2025",
+      lastUpdated: "Dernière mise à jour : 27 mai 2025",
       sections: {
-        intro: "Cette Politique de Confidentialité et de Vie Privée (\"Politique\") explique comment nous collectons, utilisons, divulguons, conservons et protégeons les informations personnelles des visiteurs de notre site Web et des clients de nos services d'agence IA. Nous nous engageons à maintenir les plus hauts standards de confidentialité et de sécurité des données.",
+        intro: "Cette Politique de Confidentialité et de Vie Privée (« Politique ») explique comment nous collectons, utilisons, divulguons, conservons et protégeons les informations personnelles des visiteurs de notre site Web et des clients de nos services d'agence IA. Nous nous engageons à maintenir les plus hauts standards de confidentialité et de sécurité des données.",
         scope: {
           title: "1. Portée",
-          content: "Cette Politique s'applique à:\n• Les visiteurs du site Web qui naviguent sur notre site public;\n• Les clients potentiels et actuels qui nous contactent ou utilisent nos services IA."
+          content: "Cette Politique s'applique à :\n• Les visiteurs du site Web qui naviguent sur notre site public ;\n• Les clients potentiels et actuels qui nous contactent ou utilisent nos services IA."
         },
         tracking: {
           title: "2. Aucun Suivi, Aucun Cookie",
@@ -78,15 +78,15 @@ const PrivacyPolicyDialog = ({ open, onOpenChange, language }: PrivacyPolicyDial
         },
         collection: {
           title: "3. Informations que Nous Collectons",
-          content: "Nous collectons uniquement les informations nécessaires pour répondre aux demandes et fournir nos services d'agence IA. Spécifiquement:\n\n• Formulaire de contact ou e-mail: Nom complet, Adresse e-mail, Nom de l'entreprise (optionnel), Détails du message ou de la demande\n• Intégration client: Nom(s) complet(s) des contacts de projet, Nom et adresse de l'entreprise, E-mail et numéro de téléphone, Exigences et portée du projet\n• Facturation et paiements: Nom du contact de facturation, Adresse de facturation, Détails de méthode de paiement\n• Livraison de service: Fichiers ou données que vous téléchargez pour traitement, Journaux de communications\n\nNote: Nous ne collectons pas de données personnelles sensibles (par exemple, numéros d'assurance sociale, informations de santé ou biométrie)."
+          content: "Nous collectons uniquement les informations nécessaires pour répondre aux demandes et fournir nos services d'agence IA. Spécifiquement :\n\n• Formulaire de contact ou e-mail : Nom complet, Adresse e-mail, Nom de l'entreprise (optionnel), Détails du message ou de la demande\n• Intégration client : Nom(s) complet(s) des contacts de projet, Nom et adresse de l'entreprise, E-mail et numéro de téléphone, Exigences et portée du projet\n• Facturation et paiements : Nom du contact de facturation, Adresse de facturation, Détails de méthode de paiement\n• Livraison de service : Fichiers ou données que vous téléchargez pour traitement, Journaux de communications\n\nNote : Nous ne collectons pas de données personnelles sensibles (par exemple, numéros d'assurance sociale, informations de santé ou biométrie)."
         },
         usage: {
           title: "4. Comment Nous Utilisons Vos Informations",
-          content: "Vos informations sont utilisées exclusivement pour:\n• Répondre à vos demandes et requêtes;\n• Vous intégrer en tant que client et configurer votre projet;\n• Livrer et personnaliser nos services IA selon vos exigences;\n• Traiter la facturation et les paiements;\n• Maintenir des dossiers pour soutenir le service continu et se conformer à toute obligation légale.\n\nNous n'utiliserons jamais vos données pour du marketing non sollicité ou ne les partagerons à des fins de profilage sans votre consentement explicite."
+          content: "Vos informations sont utilisées exclusivement pour :\n• Répondre à vos demandes et requêtes ;\n• Vous intégrer en tant que client et configurer votre projet ;\n• Livrer et personnaliser nos services IA selon vos exigences ;\n• Traiter la facturation et les paiements ;\n• Maintenir des dossiers pour soutenir le service continu et se conformer à toute obligation légale.\n\nNous n'utiliserons jamais vos données pour du marketing non sollicité ou ne les partagerons à des fins de profilage sans votre consentement explicite."
         },
         disclosure: {
           title: "5. Divulgation aux Fournisseurs de Services",
-          content: "Nous partageons vos informations uniquement avec des fournisseurs tiers de confiance qui sont essentiels à la livraison de service, tels que:\n• Processeurs de paiement pour la gestion sécurisée des transactions de facturation;\n• Plateformes d'hébergement cloud pour le stockage et le calcul de données;\n• Outils de communication si nécessaire pour collaborer sur votre projet.\n\nTous les fournisseurs sont contractuellement liés à la confidentialité et interdits d'utiliser vos informations à toute autre fin."
+          content: "Nous partageons vos informations uniquement avec des fournisseurs tiers de confiance qui sont essentiels à la livraison de service, tels que :\n• Processeurs de paiement pour la gestion sécurisée des transactions de facturation ;\n• Plateformes d'hébergement cloud pour le stockage et le calcul de données ;\n• Outils de communication si nécessaire pour collaborer sur votre projet.\n\nTous les fournisseurs sont contractuellement liés à la confidentialité et interdits d'utiliser vos informations à toute autre fin."
         },
         retention: {
           title: "6. Conservation des Données",
@@ -94,19 +94,19 @@ const PrivacyPolicyDialog = ({ open, onOpenChange, language }: PrivacyPolicyDial
         },
         security: {
           title: "7. Mesures de Sécurité",
-          content: "Nous employons des protections organisationnelles et techniques appropriées, incluant:\n• Chiffrement des données en transit (ex. TLS) et au repos;\n• Contrôles d'accès stricts et protections par mot de passe;\n• Audits de sécurité réguliers et formation du personnel sur la confidentialité des données;\n• Évaluations de fournisseurs pour assurer la conformité des tiers avec nos standards de sécurité."
+          content: "Nous employons des protections organisationnelles et techniques appropriées, incluant :\n• Chiffrement des données en transit (ex. TLS) et au repos ;\n• Contrôles d'accès stricts et protections par mot de passe ;\n• Audits de sécurité réguliers et formation du personnel sur la confidentialité des données ;\n• Évaluations de fournisseurs pour assurer la conformité des tiers avec nos standards de sécurité."
         },
         rights: {
           title: "8. Vos Droits",
-          content: "Vous avez le droit de:\n• Accéder aux informations personnelles que nous détenons à votre sujet;\n• Corriger ou mettre à jour toute donnée inexacte ou incomplète;\n• Demander la suppression de vos informations lorsqu'elles ne sont plus nécessaires;\n• Retirer le consentement pour toute activité de traitement basée sur le consentement.\n\nPour exercer ces droits, veuillez nous contacter en utilisant les détails ci-dessous. Nous répondrons rapidement et conformément aux délais applicables."
+          content: "Vous avez le droit de :\n• Accéder aux informations personnelles que nous détenons à votre sujet ;\n• Corriger ou mettre à jour toute donnée inexacte ou incomplète ;\n• Demander la suppression de vos informations lorsqu'elles ne sont plus nécessaires ;\n• Retirer le consentement pour toute activité de traitement basée sur le consentement.\n\nPour exercer ces droits, veuillez nous contacter en utilisant les détails ci-dessous. Nous répondrons rapidement et conformément aux délais applicables."
         },
         updates: {
           title: "9. Mises à Jour de Cette Politique",
-          content: "Nous pouvons réviser cette Politique pour refléter les changements dans nos pratiques ou exigences légales. La date \"Dernière mise à jour\" en haut indiquera quand les changements prennent effet. Si nous apportons des changements significatifs, nous vous en informerons en publiant la nouvelle Politique sur notre site Web."
+          content: "Nous pouvons réviser cette Politique pour refléter les changements dans nos pratiques ou exigences légales. La date « Dernière mise à jour » en haut indiquera quand les changements prennent effet. Si nous apportons des changements significatifs, nous vous en informerons en publiant la nouvelle Politique sur notre site Web."
         },
         contact: {
           title: "10. Nous Contacter",
-          content: "Si vous avez des questions, préoccupations ou demandes concernant cette Politique ou nos pratiques de confidentialité, veuillez nous contacter:\n\nAgent de confidentialité\nEric Martineau\nprivacy@feranse.com\n\nFeranse Inc.\n185 rue du Séminaire, #805\nMontréal, Québec\nH3C 2A3"
+          content: "Si vous avez des questions, préoccupations ou demandes concernant cette Politique ou nos pratiques de confidentialité, veuillez nous contacter :\n\nAgent de confidentialité\nEric Martineau\nprivacy@feranse.com\n\nFeranse Inc.\n185 rue du Séminaire, #805\nMontréal, Québec\nH3C 2A3"
         }
       }
     }
