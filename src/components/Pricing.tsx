@@ -12,7 +12,7 @@ const Pricing = ({ language }: PricingProps) => {
     en: {
       title: "Simple, Transparent Pricing",
       subtitle: "One price, unlimited possibilities",
-      price: "$700",
+      price: "$1,000",
       period: "per agent/month",
       setup: "$5,000 initial setup fee",
       commitment: "Minimum 1-year contract",
@@ -33,7 +33,7 @@ const Pricing = ({ language }: PricingProps) => {
     fr: {
       title: "Tarification Simple et Transparente",
       subtitle: "Un prix, des possibilités illimitées",
-      price: "700$",
+      price: "1 000$",
       period: "par agent/mois",
       setup: "5 000$ de frais de configuration initiale",
       commitment: "Contrat minimum d'un an",

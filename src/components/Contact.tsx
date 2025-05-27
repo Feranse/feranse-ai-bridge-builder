@@ -1,15 +1,26 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactProps {
   language: 'en' | 'fr';
 }
 
 const Contact = ({ language }: ContactProps) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
   const content = {
     en: {
       title: "Ready to Transform Your Business?",
@@ -22,11 +33,13 @@ const Contact = ({ language }: ContactProps) => {
         submit: "Send Message"
       },
       info: {
-        email: "hello@feranse.com",
+        email: "contact@feranse.com",
         phone: "+1 (514) 123-4567",
         address: "Montreal, Quebec, Canada"
       },
-      cta: "Schedule a free consultation to see how Feranse can eliminate your digital gaps."
+      cta: "Schedule a free consultation to see how Feranse can eliminate your digital gaps.",
+      success: "Message sent successfully! We'll get back to you soon.",
+      error: "Failed to send message. Please try again."
     },
     fr: {
       title: "Prêt à Transformer Votre Entreprise?",
@@ -39,11 +52,64 @@ const Contact = ({ language }: ContactProps) => {
         submit: "Envoyer le Message"
       },
       info: {
-        email: "bonjour@feranse.com",
+        email: "contact@feranse.com",
         phone: "+1 (514) 123-4567",
         address: "Montréal, Québec, Canada"
       },
-      cta: "Planifiez une consultation gratuite pour voir comment Feranse peut éliminer vos lacunes numériques."
+      cta: "Planifiez une consultation gratuite pour voir comment Feranse peut éliminer vos lacunes numériques.",
+      success: "Message envoyé avec succès! Nous vous répondrons bientôt.",
+      error: "Échec de l'envoi du message. Veuillez réessayer."
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Create email body
+      const emailBody = `
+New contact form submission from Feranse website:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Message: ${formData.message}
+      `;
+
+      // Use mailto link as a fallback solution
+      const mailtoLink = `mailto:contact@feranse.com?subject=Website Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+
+      // Show success message
+      toast({
+        title: "Success!",
+        description: content[language].success,
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: content[language].error,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -93,27 +159,47 @@ const Contact = ({ language }: ContactProps) => {
                 <CardTitle className="text-xl font-semibold">Send us a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <Input 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder={content[language].form.name}
                     className="w-full"
+                    required
                   />
                   <Input 
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder={content[language].form.email}
                     className="w-full"
+                    required
                   />
                   <Input 
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
                     placeholder={content[language].form.company}
                     className="w-full"
+                    required
                   />
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder={content[language].form.message}
                     rows={4}
                     className="w-full resize-none"
+                    required
                   />
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600">
-                    {content[language].form.submit}
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600"
+                  >
+                    {isSubmitting ? "Sending..." : content[language].form.submit}
                   </Button>
                 </form>
               </CardContent>
