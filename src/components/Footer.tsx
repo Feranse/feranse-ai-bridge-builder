@@ -9,7 +9,7 @@ const Footer = ({ language }: FooterProps) => {
       company: "Feranse",
       tagline: "AI Agency - Montreal, Quebec",
       description: "Bridging digital transformation gaps with AI-powered automation solutions.",
-      copyright: "© 2024 Feranse. All rights reserved.",
+      copyright: "© 2025 Feranse. All rights reserved.",
       links: {
         privacy: "Privacy Policy",
         terms: "Terms of Service",
@@ -20,7 +20,7 @@ const Footer = ({ language }: FooterProps) => {
       company: "Feranse", 
       tagline: "Agence IA - Montréal, Québec",
       description: "Combler les lacunes de la transformation numérique avec des solutions d'automatisation alimentées par l'IA.",
-      copyright: "© 2024 Feranse. Tous droits réservés.",
+      copyright: "© 2025 Feranse. Tous droits réservés.",
       links: {
         privacy: "Politique de Confidentialité",
         terms: "Conditions de Service",
