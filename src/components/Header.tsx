@@ -40,9 +40,9 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
           <div className="flex items-center">
             <div className="flex items-center mr-3">
               <img 
-                src="/lovable-uploads/881bb723-cfdb-4f6f-8de3-95f3647069fe.png" 
+                src="/lovable-uploads/3efa52b7-fe43-44f9-bb80-eeef5bb4f86d.png" 
                 alt="Feranse Logo" 
-                className="h-12 w-10"
+                className="h-12 w-12"
               />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].company}</h1>
