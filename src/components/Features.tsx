@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Cog, DollarSign, Clock, Shield, Zap } from "lucide-react";
+import { Shield, Zap, Settings, TrendingUp, Clock, FileText } from "lucide-react";
 
 interface FeaturesProps {
   language: 'en' | 'fr';
@@ -9,74 +9,74 @@ interface FeaturesProps {
 const Features = ({ language }: FeaturesProps) => {
   const content = {
     en: {
-      title: "Why Choose Feranse AI Agents?",
-      subtitle: "Transform your digital gaps into seamless automation",
+      title: "Why Choose Feranse?",
+      subtitle: "End-to-end AI agent management with guaranteed results",
       features: [
         {
-          icon: Bot,
-          title: "Gen AI Powered",
-          description: "Advanced artificial intelligence that learns and adapts to your specific business processes and requirements."
-        },
-        {
-          icon: Cog,
-          title: "ERP Integration",
-          description: "Seamlessly connects with existing ERP systems, eliminating manual data entry and reducing human error."
-        },
-        {
-          icon: DollarSign,
-          title: "Cost Effective",
-          description: "Replace expensive manual processes with AI agents at a fraction of the cost of traditional solutions."
-        },
-        {
-          icon: Clock,
-          title: "24/7 Operations",
-          description: "Your AI agents work around the clock, ensuring continuous processing without breaks or downtime."
-        },
-        {
           icon: Shield,
-          title: "Secure & Compliant",
-          description: "Enterprise-grade security with full compliance to Canadian data protection regulations."
+          title: "No Additional Platforms",
+          description: "Skip RPA software licensing and complex deployments. Easily deploy agents in your private cloud or let Feranse host it for you."
+        },
+        {
+          icon: TrendingUp,
+          title: "Guaranteed Results",
+          description: "Each agent is contractually bound to achieve its defined objective with full transparency and accountability."
+        },
+        {
+          icon: Settings,
+          title: "Scalable & Flexible",
+          description: "Add, modify, or retire agents easily as your needs evolve. No platform lock-in or complex migrations."
         },
         {
           icon: Zap,
-          title: "Instant Deployment",
-          description: "Quick setup and deployment with minimal disruption to your existing workflows and systems."
+          title: "Predictable Cost",
+          description: "Fixed monthly fee per agent—no surprise overages. Budget with confidence and scale as needed."
+        },
+        {
+          icon: Clock,
+          title: "Rapid Deployment",
+          description: "Agents configured and live within 4 weeks. From design to deployment, we handle the entire process."
+        },
+        {
+          icon: FileText,
+          title: "Full Transparency",
+          description: "Detailed usage and performance reports with continuous improvement and feature updates included."
         }
       ]
     },
     fr: {
-      title: "Pourquoi Choisir les Agents IA Feranse?",
-      subtitle: "Transformez vos lacunes numériques en automatisation transparente",
+      title: "Pourquoi Choisir Feranse?",
+      subtitle: "Gestion complète d'agents IA avec des résultats garantis",
       features: [
         {
-          icon: Bot,
-          title: "Alimenté par l'IA Gen",
-          description: "Intelligence artificielle avancée qui apprend et s'adapte à vos processus métier et exigences spécifiques."
-        },
-        {
-          icon: Cog,
-          title: "Intégration ERP",
-          description: "Se connecte de manière transparente aux systèmes ERP existants, éliminant la saisie manuelle et réduisant les erreurs."
-        },
-        {
-          icon: DollarSign,
-          title: "Rentable",
-          description: "Remplacez les processus manuels coûteux par des agents IA à une fraction du coût des solutions traditionnelles."
-        },
-        {
-          icon: Clock,
-          title: "Opérations 24/7",
-          description: "Vos agents IA travaillent en continu, assurant un traitement continu sans pauses ni temps d'arrêt."
-        },
-        {
           icon: Shield,
-          title: "Sécurisé et Conforme",
-          description: "Sécurité de niveau entreprise avec conformité complète aux réglementations canadiennes de protection des données."
+          title: "Aucune Plateforme Supplémentaire",
+          description: "Évitez les licences de logiciels RPA et les déploiements complexes. Déployez facilement des agents dans votre cloud privé ou laissez Feranse l'héberger pour vous."
+        },
+        {
+          icon: TrendingUp,
+          title: "Résultats Garantis",
+          description: "Chaque agent est contractuellement lié à l'atteinte de son objectif défini avec une transparence et une responsabilité totales."
+        },
+        {
+          icon: Settings,
+          title: "Évolutif et Flexible",
+          description: "Ajoutez, modifiez ou retirez des agents facilement selon l'évolution de vos besoins. Aucun verrouillage de plateforme ou migration complexe."
         },
         {
           icon: Zap,
-          title: "Déploiement Instantané",
-          description: "Configuration et déploiement rapides avec perturbation minimale de vos flux de travail existants."
+          title: "Coût Prévisible",
+          description: "Frais mensuels fixes par agent—aucun dépassement surprise. Budgétisez en toute confiance et évoluez selon vos besoins."
+        },
+        {
+          icon: Clock,
+          title: "Déploiement Rapide",
+          description: "Agents configurés et en ligne dans les 4 semaines. De la conception au déploiement, nous gérons tout le processus."
+        },
+        {
+          icon: FileText,
+          title: "Transparence Totale",
+          description: "Rapports détaillés d'utilisation et de performance avec amélioration continue et mises à jour de fonctionnalités incluses."
         }
       ]
     }
@@ -94,16 +94,14 @@ const Features = ({ language }: FeaturesProps) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {content[language].features.map((feature, index) => (
-            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300 hover:border-purple-200">
-              <CardHeader>
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
-                    <feature.icon className="h-6 w-6 text-purple-600" />
-                  </div>
+            <Card key={index} className="border border-purple-100 hover:border-purple-200 transition-colors">
+              <CardHeader className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-center text-gray-900">
+                <CardTitle className="text-xl font-semibold text-gray-900">
                   {feature.title}
                 </CardTitle>
               </CardHeader>

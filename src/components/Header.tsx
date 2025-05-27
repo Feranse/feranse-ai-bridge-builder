@@ -13,19 +13,19 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
       company: "Feranse",
       nav: {
         features: "Features",
+        story: "Success Story",
         pricing: "Pricing",
         contact: "Contact"
-      },
-      cta: "Get Started"
+      }
     },
     fr: {
       company: "Feranse",
       nav: {
         features: "Fonctionnalités",
+        story: "Histoire de Succès",
         pricing: "Tarification",
         contact: "Contact"
-      },
-      cta: "Commencer"
+      }
     }
   };
 
@@ -53,6 +53,9 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
             <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.features}
             </a>
+            <a href="#story" className="text-gray-700 hover:text-purple-600 transition-colors">
+              {content[language].nav.story}
+            </a>
             <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.pricing}
             </a>
@@ -70,9 +73,6 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
             >
               <Globe className="h-4 w-4" />
               <span className="text-sm font-medium">{language.toUpperCase()}</span>
-            </Button>
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white">
-              {content[language].cta}
             </Button>
           </div>
         </div>

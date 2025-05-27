@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Zap } from "lucide-react";
+import { Bot } from "lucide-react";
 
 interface HeroProps {
   language: 'en' | 'fr';
@@ -9,28 +9,35 @@ interface HeroProps {
 const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
-      headline: "Bridge Your Digital Transformation Gaps",
-      subheadline: "AI-Powered Agents That Eliminate Manual Processes",
-      description: "Stop relying on clerks and manual HR solutions to fill the gaps between your ERP systems. Our Gen AI agents automate your digital-to-digital processes seamlessly.",
-      cta: "Start Your Automation Journey",
-      secondary: "Schedule a Demo",
-      stats: {
-        efficiency: "90% Efficiency Increase",
-        cost: "70% Cost Reduction", 
-        time: "24/7 Operations"
+      tagline: "AI Agency - Montreal, Quebec",
+      headline: "Your AI Agency for Automated Business Workflows",
+      subheadline: "AI Agents as a Service for Enterprise Automation",
+      description: "Feranse is a specialized AI agency that builds, deploys, and maintains custom AI agents to run critical business processes. We design, configure, and operate AI-powered agents to close automation gaps between your cloud ERP and other digital systems.",
+      cta: "Schedule a Demo",
+      benefits: {
+        cost: "Predictable Cost",
+        deployment: "Rapid Deployment", 
+        improvement: "Continuous Improvement"
       }
     },
     fr: {
-      headline: "Comblez les Lacunes de Votre Transformation Numérique",
-      subheadline: "Agents IA Qui Éliminent les Processus Manuels",
-      description: "Arrêtez de compter sur des commis et des solutions RH manuelles pour combler les lacunes entre vos systèmes ERP. Nos agents IA Gen automatisent vos processus numériques de manière transparente.",
-      cta: "Commencez Votre Parcours d'Automatisation",
-      secondary: "Planifier une Démo",
-      stats: {
-        efficiency: "90% d'Augmentation d'Efficacité",
-        cost: "70% de Réduction des Coûts",
-        time: "Opérations 24/7"
+      tagline: "Agence IA - Montréal, Québec",
+      headline: "Votre Agence IA pour les Flux de Travail Automatisés",
+      subheadline: "Agents IA en tant que Service pour l'Automatisation d'Entreprise",
+      description: "Feranse est une agence IA spécialisée qui construit, déploie et maintient des agents IA personnalisés pour exécuter des processus métier critiques. Nous concevons, configurons et opérons des agents alimentés par l'IA pour combler les lacunes d'automatisation entre votre ERP cloud et d'autres systèmes numériques.",
+      cta: "Planifier une Démo",
+      benefits: {
+        cost: "Coût Prévisible",
+        deployment: "Déploiement Rapide",
+        improvement: "Amélioration Continue"
       }
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -41,7 +48,7 @@ const Hero = ({ language }: HeroProps) => {
           <div className="flex justify-center mb-6">
             <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">
               <Bot className="h-4 w-4" />
-              <span>AI Agency - Montreal, Quebec</span>
+              <span>{content[language].tagline}</span>
             </div>
           </div>
           
@@ -57,23 +64,21 @@ const Hero = ({ language }: HeroProps) => {
             {content[language].description}
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-3 text-lg">
+          <div className="flex justify-center mb-12">
+            <Button 
+              onClick={scrollToContact}
+              variant="outline" 
+              size="lg" 
+              className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 text-lg"
+            >
               {content[language].cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 text-lg">
-              {content[language].secondary}
             </Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {Object.entries(content[language].stats).map(([key, value]) => (
+            {Object.entries(content[language].benefits).map(([key, value]) => (
               <div key={key} className="text-center">
-                <div className="flex justify-center mb-2">
-                  <Zap className="h-8 w-8 text-purple-600" />
-                </div>
-                <p className="text-2xl font-bold text-gray-900">{value}</p>
+                <p className="text-xl font-bold text-gray-900">{value}</p>
               </div>
             ))}
           </div>

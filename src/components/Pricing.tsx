@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 
 interface PricingProps {
   language: 'en' | 'fr';
@@ -53,8 +53,15 @@ const Pricing = ({ language }: PricingProps) => {
     }
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="pricing" className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="pricing" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -66,14 +73,7 @@ const Pricing = ({ language }: PricingProps) => {
         </div>
         
         <div className="max-w-lg mx-auto">
-          <Card className="border-2 border-purple-200 shadow-xl relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
-                <Star className="h-4 w-4 mr-1" />
-                Popular Choice
-              </div>
-            </div>
-            
+          <Card className="border-2 border-purple-200 shadow-xl">
             <CardHeader className="text-center pt-8">
               <CardTitle className="text-2xl font-bold text-gray-900">AI Agent</CardTitle>
               <div className="mt-4">
@@ -94,7 +94,10 @@ const Pricing = ({ language }: PricingProps) => {
                 ))}
               </ul>
               
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 text-lg mb-4">
+              <Button 
+                onClick={scrollToContact}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 text-lg mb-4"
+              >
                 {content[language].cta}
               </Button>
               

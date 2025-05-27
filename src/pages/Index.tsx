@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import CustomerStory from "@/components/CustomerStory";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -15,6 +16,9 @@ const Index = () => {
       <Header language={language} setLanguage={setLanguage} />
       <Hero language={language} />
       <Features language={language} />
+      <div id="story">
+        <CustomerStory language={language} />
+      </div>
       <Pricing language={language} />
       <Contact language={language} />
       <Footer language={language} />
