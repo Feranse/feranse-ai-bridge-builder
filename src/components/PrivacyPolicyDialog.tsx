@@ -67,24 +67,24 @@ const PrivacyPolicyDialog = ({ open, onOpenChange, language }: PrivacyPolicyDial
       ]
     },
     fr: {
-      title: "Politique de Confidentialité et de Vie Privée",
+      title: "Politique de Confidentialité et Protection de la Vie Privée",
       lastUpdated: "Dernière mise à jour: 27 mai 2025",
       sections: [
         {
           title: "Introduction",
-          content: "Cette Politique de Confidentialité et de Vie Privée (\"Politique\") explique comment nous collectons, utilisons, divulguons, conservons et protégeons les informations personnelles des visiteurs de notre site web et des clients de nos services d'agence IA. Nous nous engageons à maintenir les plus hauts standards de confidentialité et de sécurité des données."
+          content: "Cette Politique de Confidentialité et Protection de la Vie Privée (\"Politique\") explique comment nous collectons, utilisons, divulguons, conservons et protégeons les informations personnelles des visiteurs de notre site web et des clients de nos services d'agence IA. Nous nous engageons à maintenir les plus hauts standards de confidentialité et de sécurité des données."
         },
         {
           title: "1. Portée",
           content: "Cette Politique s'applique à :\n• Les visiteurs du site web qui naviguent sur notre site public ;\n• Les clients potentiels et actuels qui nous contactent ou utilisent nos services IA."
         },
         {
-          title: "2. Aucun Suivi, Aucun Cookie",
-          content: "Nous ne déployons pas de cookies, balises web, outils d'analyse, ou toute forme de suivi des visiteurs sur notre site web.\n\nNous ne collectons pas d'adresses IP, d'historique de navigation, d'empreintes d'appareils, ou de données à des fins de profilage ou de marketing."
+          title: "2. Aucun Traçage, Aucun Cookie",
+          content: "Nous ne déployons pas de cookies, balises web, outils d'analyse, ou toute forme de traçage des visiteurs sur notre site web.\n\nNous ne collectons pas d'adresses IP, d'historique de navigation, d'empreintes d'appareils, ou de données à des fins de profilage ou de marketing."
         },
         {
           title: "3. Informations que Nous Collectons",
-          content: "Nous collectons uniquement les informations nécessaires pour répondre aux demandes et fournir nos services d'agence IA. Spécifiquement :\n\n• Formulaire de contact ou email : Nom complet, Adresse email, Nom de l'entreprise (optionnel), Détails du message ou de la demande\n• Intégration client : Nom(s) complet(s) des contacts de projet, Nom et adresse de l'entreprise, Email et numéro de téléphone, Exigences et portée du projet\n• Facturation et paiements : Nom du contact de facturation, Adresse de facturation, Détails du mode de paiement\n• Livraison de service : Fichiers ou données que vous téléchargez pour traitement, Journaux de communications\n\nNote : Nous ne collectons pas de données personnelles sensibles (ex. numéros d'assurance sociale, informations de santé, ou biométrie)."
+          content: "Nous collectons uniquement les informations nécessaires pour répondre aux demandes et fournir nos services d'agence IA. Spécifiquement :\n\n• Formulaire de contact ou courriel : Nom complet, Adresse courriel, Nom de l'entreprise (optionnel), Détails du message ou de la demande\n• Intégration client : Nom(s) complet(s) des contacts de projet, Nom et adresse de l'entreprise, Courriel et numéro de téléphone, Exigences et portée du projet\n• Facturation et paiements : Nom du contact de facturation, Adresse de facturation, Détails du mode de paiement\n• Livraison de service : Fichiers ou données que vous téléchargez pour traitement, Historique des communications\n\nNote : Nous ne collectons pas de données personnelles sensibles (ex. numéros d'assurance sociale, informations de santé, ou biométrie)."
         },
         {
           title: "4. Comment Nous Utilisons Vos Informations",
