@@ -24,6 +24,7 @@ const Contact = ({ language }: ContactProps) => {
   const content = {
     en: {
       cardtitle: "Contact Information",
+      secondcardtitle: "Send us a Message",
       title: "Ready to Transform Your Business?",
       subtitle: "Get in touch with our team to discuss your automation needs",
       form: {
@@ -44,6 +45,7 @@ const Contact = ({ language }: ContactProps) => {
     },
     fr: {
       cardtitle: "Coordonnées",
+      secondcardtitle: "Envoyez-nous un Message",
       title: "Prêt à Transformer Votre Entreprise?",
       subtitle: "Contactez notre équipe pour discuter de vos besoins d'automatisation",
       form: {
@@ -158,7 +160,7 @@ Message: ${formData.message}
           <div>
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">Send us a Message</CardTitle>
+                <CardTitle className="text-xl font-semibold">{content[language].secondcardtitle}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
