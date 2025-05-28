@@ -42,24 +42,24 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       cta: "Ready to Automate Your Workflow?"
     },
     fr: {
-      title: "Histoire de Succès Client",
+      title: "Histoire de Réussite Client",
       subtitle: "Comment nous avons automatisé la synchronisation des bons de commande entre les systèmes ERP et MRP",
       challenge: {
         title: "Défi",
-        description: "Notre premier client a migré ses systèmes ERP et MRP vers le cloud, en intégrant les API de chaque plateforme. Cependant, un processus métier clé—la synchronisation des mises à jour de bons de commande (BC) entre leur ERP et leur système MRP—nécessitait encore une double saisie manuelle.",
+        description: "Notre premier client a migré ses systèmes ERP et MRP en solutions infonuagiques, en intégrant les API de chaque plateforme. Cependant, un processus métier clé—la synchronisation des mises à jour de bons de commande (BC) entre leur ERP et leur système MRP—nécessitait encore une double saisie manuelle.",
         details: [
           "ERP : Oracle Cloud",
-          "MRP : Logiciel Spécialisé par Domaine",
+          "MRP : Logiciel Spécialisé de Domaine",
           "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
-        ]
+        s
       },
       solution: {
         title: "Solution : L'Agent de Synchronisation BC",
         objective: "Assurer que chaque mise à jour de BC dans Oracle ERP soit automatiquement répliquée dans le système MRP.",
         design: [
-          "Écoute les événements de changement de BC dans Oracle via des webhooks API",
+          "Écoute les événements de changement de BC dans Oracle via des webhooks/API",
           "Transforme et valide les données pour correspondre aux exigences MRP",
-          "Extrait les données de l'ERP avec des appels API sécurisés pour mettre à jour le système MRP"
+          "Extrait les données de l'ERP avec des appels API sécurisés puis met à jour le système MRP"
         ],
         deployment: "Hébergé sur le backend de Feranse avec une sécurité de niveau entreprise et un accès basé sur les rôles avec journalisation d'audit pour la conformité."
       },

@@ -34,7 +34,7 @@ const Contact = ({ language }: ContactProps) => {
       },
       info: {
         email: "contact@feranse.com",
-        phone: "+1 (514) 123-4567",
+        phone: "N/A",
         address: "Montreal, Quebec, Canada"
       },
       cta: "Schedule a free consultation to see how Feranse can eliminate your digital gaps.",
@@ -46,14 +46,14 @@ const Contact = ({ language }: ContactProps) => {
       subtitle: "Contactez notre équipe pour discuter de vos besoins d'automatisation",
       form: {
         name: "Nom Complet",
-        email: "Adresse Email",
+        email: "Courriel",
         company: "Nom de l'Entreprise", 
         message: "Parlez-nous de vos défis d'automatisation",
         submit: "Envoyer le Message"
       },
       info: {
         email: "contact@feranse.com",
-        phone: "+1 (514) 123-4567",
+        phone: "N/A",
         address: "Montréal, Québec, Canada"
       },
       cta: "Planifiez une consultation gratuite pour voir comment Feranse peut éliminer vos lacunes numériques.",
