@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
-
 interface PricingProps {
   language: 'en' | 'fr';
 }
-
-const Pricing = ({ language }: PricingProps) => {
+const Pricing = ({
+  language
+}: PricingProps) => {
   const content = {
     en: {
       title: "Simple, Transparent Pricing",
@@ -15,15 +15,7 @@ const Pricing = ({ language }: PricingProps) => {
       period: "per agent/month",
       setup: "$5,000 initial setup fee for new customers",
       commitment: "Minimum 1-year contract",
-      features: [
-        "24/7 AI Agent Operations",
-        "ERP System Integration",
-        "Custom Process Automation", 
-        "Real-time Monitoring & Analytics",
-        "Dedicated Support Team",
-        "Regular Updates & Improvements",
-        "Multi-language Support"
-      ],
+      features: ["24/7 AI Agent Operations", "ERP System Integration", "Custom Process Automation", "Real-time Monitoring & Analytics", "Dedicated Support Team", "Regular Updates & Improvements", "Multi-language Support"],
       cta: "Start Your Digital Transformation",
       contact: "Contact for Enterprise Pricing",
       fineprint: "* All prices in CAD."
@@ -35,30 +27,21 @@ const Pricing = ({ language }: PricingProps) => {
       period: "par agent/mois",
       setup: "5 000 $ de frais de configuration initiale pour nouveaux clients",
       commitment: "Contrat minimum d'un an",
-      features: [
-        "Opérations d'Agent IA 24/7",
-        "Intégration de Système ERP",
-        "Automatisation de Processus Personnalisée",
-        "Surveillance et Analyses en Temps Réel",
-        "Équipe de Support Dédiée",
-        "Mises à Jour et Améliorations Régulières",
-        "Support Multilingue"
-      ],
+      features: ["Opérations d'Agent IA 24/7", "Intégration de Système ERP", "Automatisation de Processus Personnalisée", "Surveillance et Analyses en Temps Réel", "Équipe de Support Dédiée", "Mises à Jour et Améliorations Régulières", "Support Multilingue"],
       cta: "Commencez Votre Transformation Numérique",
       contact: "Contactez pour la Tarification Entreprise",
       fineprint: "* Tous les prix en CAD."
     }
   };
-
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="pricing" className="py-16 bg-white">
+  return <section id="pricing" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -72,7 +55,7 @@ const Pricing = ({ language }: PricingProps) => {
         <div className="max-w-lg mx-auto">
           <Card className="border-2 border-purple-200 shadow-xl">
             <CardHeader className="text-center pt-8">
-              <CardTitle className="text-2xl font-bold text-gray-900">AI Agent</CardTitle>
+              <CardTitle className="text-2xl font-bold text-gray-900">Agent IA</CardTitle>
               <div className="mt-4">
                 <span className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].price}</span>
                 <span className="text-gray-600 ml-2">{content[language].period}</span>
@@ -83,24 +66,19 @@ const Pricing = ({ language }: PricingProps) => {
             
             <CardContent className="pt-4">
               <ul className="space-y-3 mb-8">
-                {content[language].features.map((feature, index) => (
-                  <li key={index} className="flex items-center">
+                {content[language].features.map((feature, index) => <li key={index} className="flex items-center">
                     <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
-              <Button 
-                onClick={scrollToContact}
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 text-lg mb-4"
-              >
+              <Button onClick={scrollToContact} className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 text-lg mb-4">
                 {content[language].cta}
               </Button>
               
               {/* <p className="text-center text-gray-600 text-sm mb-4">
                 {content[language].contact}
-              </p> */}
+               </p> */}
               
               <p className="text-xs text-gray-500 text-center leading-relaxed">
                 {content[language].fineprint}
@@ -109,8 +87,6 @@ const Pricing = ({ language }: PricingProps) => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
