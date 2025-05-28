@@ -23,6 +23,7 @@ const Contact = ({ language }: ContactProps) => {
 
   const content = {
     en: {
+      cardtitle: "Contact Information",
       title: "Ready to Transform Your Business?",
       subtitle: "Get in touch with our team to discuss your automation needs",
       form: {
@@ -42,6 +43,7 @@ const Contact = ({ language }: ContactProps) => {
       error: "Failed to send message. Please try again."
     },
     fr: {
+      cardtitle: "Coordonnées",
       title: "Prêt à Transformer Votre Entreprise?",
       subtitle: "Contactez notre équipe pour discuter de vos besoins d'automatisation",
       form: {
@@ -129,7 +131,7 @@ Message: ${formData.message}
           <div>
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">Contact Information</CardTitle>
+                <CardTitle className="text-xl font-semibold">{content[language].cardtitle</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center space-x-3">
