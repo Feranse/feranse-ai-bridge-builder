@@ -23,7 +23,7 @@ const Hero = ({ language }: HeroProps) => {
     fr: {
       tagline: "Agence IA - Montréal, Québec",
       headline: "Votre Agence IA pour les Flux de Travail Automatisés",
-      subheadline: "Agents IA en tant que Service pour l'Automatisation d'Entreprise",
+      subheadline: "Agents IA en tant que Service pour l'Automatisation en Entreprise",
       description: "Feranse est une agence IA spécialisée qui construit, déploie et maintient des agents IA personnalisés pour exécuter des processus métier critiques. Nous concevons, configurons et opérons des agents alimentés par l'IA pour combler les lacunes d'automatisation entre votre ERP cloud et d'autres systèmes numériques.",
       cta: "Planifier une Démo",
       benefits: {
