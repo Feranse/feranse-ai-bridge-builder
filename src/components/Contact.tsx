@@ -131,7 +131,7 @@ Message: ${formData.message}
           <div>
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">{content[language].cardtitle</CardTitle>
+                <CardTitle className="text-xl font-semibold">{content[language].cardtitle}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center space-x-3">
