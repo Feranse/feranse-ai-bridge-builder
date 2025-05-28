@@ -160,7 +160,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/jbqmU8U-zi0"
+              src="https://youtu.be/eGb4iu90vm4"
               title="Customer Success Story Video"
               className="absolute inset-0 w-full h-full"
               frameBorder="0"
