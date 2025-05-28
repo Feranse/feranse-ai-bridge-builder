@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle, Target, TrendingUp } from "lucide-react";
 
@@ -153,6 +154,20 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
               </ul>
             </CardContent>
           </Card>
+        </div>
+
+        {/* YouTube Video Embed */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/jbqmU8U-zi0"
+              title="Customer Success Story Video"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
         {/* <div className="text-center mt-12">
