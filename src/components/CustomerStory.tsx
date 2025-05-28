@@ -51,7 +51,6 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           "ERP : Oracle Cloud",
           "MRP : Logiciel Spécialisé de Domaine",
           "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
-        s
       },
       solution: {
         title: "Solution : L'Agent de Synchronisation BC",
