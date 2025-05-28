@@ -9,7 +9,7 @@ interface PricingProps {
 const Pricing = ({ language }: PricingProps) => {
   const content = {
     en: {
-      cardtitle:"AI Agent"
+      cardtitle:"AI Agent",
       title: "Simple, Transparent Pricing",
       subtitle: "One price, unlimited possibilities",
       price: "$1,000",
@@ -30,7 +30,7 @@ const Pricing = ({ language }: PricingProps) => {
       fineprint: "* All prices in CAD."
     },
     fr: {
-      cardtitle:"Agent IA"
+      cardtitle:"Agent IA",
       title: "Tarification Simple et Transparente",
       subtitle: "Un prix, des possibilités illimitées",
       price: "1 000 $",
