@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle, Target, TrendingUp } from "lucide-react";
 
@@ -50,7 +49,8 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         details: [
           "ERP : Oracle Cloud",
           "MRP : Logiciel Spécialisé de Domaine",
-          "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données",
+          "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
+        ]
       },
       solution: {
         title: "Solution : L'Agent de Synchronisation BC",
