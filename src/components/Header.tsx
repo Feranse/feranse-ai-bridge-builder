@@ -14,7 +14,6 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
       nav: {
         features: "Features",
         story: "Success Story",
-        pricing: "Pricing",
         contact: "Contact"
       }
     },
@@ -23,7 +22,6 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
       nav: {
         features: "Fonctionnalités",
         story: "Histoire de Succès",
-        pricing: "Tarification",
         contact: "Contact"
       }
     }
@@ -55,9 +53,6 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
             </a>
             <a href="#story" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.story}
-            </a>
-            <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition-colors">
-              {content[language].nav.pricing}
             </a>
             <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.contact}

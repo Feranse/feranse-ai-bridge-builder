@@ -10,27 +10,17 @@ const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
       tagline: "AI Agency - Montreal, Quebec",
-      headline: "Your AI Agency for Automated Business Workflows",
-      subheadline: "AI Agents as a Service for Enterprise Automation",
-      description: "Feranse is a specialized AI agency that builds, deploys, and maintains custom AI agents to run critical business processes. We design, configure, and operate AI-powered agents to close automation gaps between your cloud ERP and other digital systems.",
+      headline: "Tired of your team spending hours on the same ERP clicks every single day?",
+      subheadline: "Feranse does them for you automatically.",
+      description: "Less data entry, more work done. No consulting fees, no change management, no new app.",
       cta: "Schedule a Demo",
-      benefits: {
-        cost: "Predictable Cost",
-        deployment: "Rapid Deployment", 
-        improvement: "Continuous Improvement"
-      }
     },
     fr: {
       tagline: "Agence IA - Montréal, Québec",
-      headline: "Votre Agence IA pour les Flux de Travail Automatisés",
-      subheadline: "Agents IA en tant que Service pour l'Automatisation en Entreprise",
-      description: "Feranse est une agence IA spécialisée qui construit, déploie et maintient des agents IA personnalisés pour exécuter des processus métier critiques. Nous concevons, configurons et opérons des agents alimentés par l'IA pour combler les lacunes d'automatisation entre votre ERP cloud et d'autres systèmes numériques.",
+      headline: "Fatigué que votre équipe passe des heures sur les mêmes clics ERP chaque jour?",
+      subheadline: "Feranse les fait pour vous automatiquement.",
+      description: "Moins de saisie de données, plus de travail accompli. Aucun frais de consultation, aucune gestion du changement, aucune nouvelle application.",
       cta: "Planifier une Démo",
-      benefits: {
-        cost: "Coût Prévisible",
-        deployment: "Déploiement Rapide",
-        improvement: "Amélioration Continue"
-      }
     }
   };
 
@@ -73,14 +63,6 @@ const Hero = ({ language }: HeroProps) => {
             >
               {content[language].cta}
             </Button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {Object.entries(content[language].benefits).map(([key, value]) => (
-              <div key={key} className="text-center">
-                <p className="text-xl font-bold text-gray-900">{value}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

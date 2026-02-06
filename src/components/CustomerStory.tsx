@@ -10,69 +10,65 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
   const content = {
     en: {
       title: "Customer Success Story",
-      subtitle: "How we automated PO synchronization between ERP and MRP systems",
+      subtitle: "How we automated product and Bill of Materials creation in a manufacturing ERP",
       challenge: {
         title: "Challenge",
-        description: "Our first customer migrated their ERP and MRP systems to the cloud, integrating each platform's APIs. However, a key business process—synchronizing purchase order (PO) updates between their ERP and their MRP system—still required manual double entry.",
+        description: "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens — repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
         details: [
-          "ERP: Oracle Cloud",
-          "MRP: Domain Specific Software", 
-          "Gap: PO updates in ERP were not pushed to MRP, causing delays and data discrepancies"
+          "ERP: Manufacturing Cloud ERP",
+          "Process: Product creation followed by BoM assembly",
+          "Gap: Hours of manual clicks and data entry for each new product and its BoM"
         ]
       },
       solution: {
-        title: "Solution: The PO Sync Agent",
-        objective: "Ensure every PO update in Oracle ERP is automatically replicated in the MRP system.",
+        title: "Solution: The Product & BoM Agent",
+        objective: "Automatically create products in the ERP and assemble their Bills of Materials — eliminating repetitive manual data entry.",
         design: [
-          "Listens to PO change events in Oracle via API webhooks",
-          "Transforms and validates data to match MRP requirements",
-          "Extracts data from ERP with secured API calls to update the MRP system"
+          "Reads product specifications from source data and creates the product record in the ERP",
+          "Automatically builds the Bill of Materials with components, quantities, and sourcing details",
+          "Validates all entries against business rules before committing changes"
         ],
-        deployment: "Hosted on Feranse's backend with enterprise-grade security and role-based access with audit logging for compliance."
       },
       results: {
         title: "Results & Value",
         achievements: [
-          "Complete Automation: Zero manual data entry for PO updates",
-          "Productivity: Gives time back to resources to focus on value added tasks",
-          "Accuracy & Compliance: Eliminated human errors and ensured audit trails",
-          "Cost Efficiency: $1000/month per automation versus a new RPA platform with integration and maintenance costs"
+          "Complete Automation: Zero manual clicks for product and BoM creation",
+          "Productivity: Hours of repetitive data entry eliminated — team refocused on engineering and design",
+          "Accuracy & Compliance: Eliminated human errors in BoM assembly with built-in validation",
+          "Speed: New products with full BoMs created in minutes instead of hours"
         ]
       },
-      cta: "Ready to Automate Your Workflow?"
     },
     fr: {
       title: "Histoire de Réussite Client",
-      subtitle: "Comment nous avons automatisé la synchronisation des bons de commande entre les systèmes ERP et MRP",
+      subtitle: "Comment nous avons automatisé la création de produits et de nomenclatures dans un ERP manufacturier",
       challenge: {
         title: "Défi",
-        description: "Notre premier client a migré ses systèmes ERP et MRP en solutions infonuagiques, en intégrant les API de chaque plateforme. Cependant, un processus métier clé—la synchronisation des mises à jour de bons de commande (BC) entre leur ERP et leur système MRP—nécessitait encore une double saisie manuelle.",
+        description: "Un client manufacturier devait créer de nouveaux produits dans son système ERP puis construire des nomenclatures (BoM) détaillées pour chaque produit. Ce processus nécessitait une saisie manuelle extensive sur plusieurs écrans — des clics répétitifs, du copier-coller de spécifications et la consultation croisée de données fournisseurs.",
         details: [
-          "ERP : Oracle Cloud",
-          "MRP : Logiciel Spécialisé de Domaine",
-          "Lacune : Les mises à jour de BC dans l'ERP n'étaient pas poussées vers le MRP, causant des retards et des incohérences de données"
+          "ERP : ERP Cloud Manufacturier",
+          "Processus : Création de produit suivie de l'assemblage de la nomenclature",
+          "Lacune : Des heures de clics manuels et de saisie de données pour chaque nouveau produit et sa nomenclature"
         ]
       },
       solution: {
-        title: "Solution : L'Agent de Synchronisation BC",
-        objective: "Assurer que chaque mise à jour de BC dans Oracle ERP soit automatiquement répliquée dans le système MRP.",
+        title: "Solution : L'Agent Produit & Nomenclature",
+        objective: "Créer automatiquement des produits dans l'ERP et assembler leurs nomenclatures — en éliminant la saisie manuelle répétitive.",
         design: [
-          "Écoute les événements de changement de BC dans Oracle via des webhooks/API",
-          "Transforme et valide les données pour correspondre aux exigences MRP",
-          "Extrait les données de l'ERP avec des appels API sécurisés puis met à jour le système MRP"
+          "Lit les spécifications produit à partir des données sources et crée l'enregistrement produit dans l'ERP",
+          "Construit automatiquement la nomenclature avec les composants, quantités et détails d'approvisionnement",
+          "Valide toutes les entrées selon les règles métier avant de valider les changements"
         ],
-        deployment: "Hébergé sur le backend de Feranse avec une sécurité de niveau entreprise et un accès basé sur les rôles avec journalisation d'audit pour la conformité."
       },
       results: {
         title: "Résultats et Valeur",
         achievements: [
-          "Automatisation Complète : Zéro saisie manuelle de données pour les mises à jour de BC",
-          "Productivité : Redonne du temps aux ressources pour se concentrer sur les tâches à valeur ajoutée",
-          "Précision et Conformité : Élimination des erreurs humaines et assurance de pistes d'audit",
-          "Efficacité des Coûts : 1000$/mois par automatisation versus une nouvelle plateforme RPA avec les coûts d'intégration et de maintenance"
+          "Automatisation Complète : Zéro clic manuel pour la création de produits et de nomenclatures",
+          "Productivité : Des heures de saisie répétitive éliminées — l'équipe recentrée sur l'ingénierie et la conception",
+          "Précision et Conformité : Élimination des erreurs humaines dans l'assemblage des nomenclatures grâce à la validation intégrée",
+          "Rapidité : Nouveaux produits avec nomenclatures complètes créés en minutes au lieu d'heures"
         ]
       },
-      cta: "Prêt à Automatiser Votre Flux de Travail ?"
     }
   };
 
@@ -131,7 +127,6 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
                   ))}
                 </ul>
               </div>
-              {/* <p className="text-sm text-gray-600">{content[language].solution.deployment}</p> */}
             </CardContent>
           </Card>
 
@@ -169,18 +164,6 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
             ></iframe>
           </div>
         </div>
-
-        {/* <div className="text-center mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            {content[language].cta}
-          </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            {language === 'en' 
-              ? "Partner with Feranse to design your tailored AI agents—contact us at contact@feranse.com or visit www.feranse.com to schedule a discovery call."
-              : "Partenariat avec Feranse pour concevoir vos agents IA sur mesure—contactez-nous à contact@feranse.com ou visitez www.feranse.com pour planifier un appel de découverte."
-            }
-          </p>
-        </div> */}
       </div>
     </section>
   );
