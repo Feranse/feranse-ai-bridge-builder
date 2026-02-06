@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Zap, Settings, TrendingUp, Clock, FileText } from "lucide-react";
+import { Shield, RefreshCw, Zap } from "lucide-react";
 
 interface FeaturesProps {
   language: 'en' | 'fr';
@@ -10,73 +10,43 @@ const Features = ({ language }: FeaturesProps) => {
   const content = {
     en: {
       title: "Why Choose Feranse?",
-      subtitle: "End-to-end AI agent management with guaranteed results",
+      subtitle: "Enterprise-grade AI agents built on three core pillars",
       features: [
         {
           icon: Shield,
-          title: "No Additional Platforms",
-          description: "Skip RPA software licensing and complex deployments. Easily deploy agents in your private cloud or let Feranse host it for you."
+          title: "Security",
+          description: "Our agents run as containerized services that can be deployed anywhere — on-premises in your own container runtime or cloud-hosted as a SaaS by Feranse. Bring your own LLM API keys or use our inference. Manage your AI agents like regular employees through your existing IAM systems like Active Directory, with full role-based access control."
         },
         {
-          icon: TrendingUp,
-          title: "Guaranteed Results",
-          description: "Each agent is contractually bound to achieve its defined objective with full transparency and accountability."
-        },
-        {
-          icon: Settings,
-          title: "Scalable & Flexible",
-          description: "Add, modify, or retire agents easily as your needs evolve. No platform lock-in or complex migrations."
+          icon: RefreshCw,
+          title: "Consistency",
+          description: "Our adaptive AI engine agentically heals running processes when they break, guided by the business goals and objectives defined for each agent. Deep monitoring and tracking give you a constant, real-time view of every execution step of your digital work — so nothing slips through the cracks."
         },
         {
           icon: Zap,
-          title: "Predictable Cost",
-          description: "Fixed monthly fee per agent—no surprise overages. Budget with confidence and scale as needed."
-        },
-        {
-          icon: Clock,
-          title: "Rapid Deployment",
-          description: "Agents configured and live within 4 weeks. From design to deployment, we handle the entire process."
-        },
-        {
-          icon: FileText,
-          title: "Full Transparency",
-          description: "Detailed usage and performance reports with continuous improvement and feature updates included."
+          title: "Fast",
+          description: "Lightning-fast delivery from design to deployment. Our agents save your team hours of repetitive ERP clicks every day. We're committed to saving companies time through click automation — from how fast we deploy and fix to getting the work done right, so your team can focus on what matters most."
         }
       ]
     },
     fr: {
       title: "Pourquoi Choisir Feranse?",
-      subtitle: "Gestion complète d'agents IA avec des résultats garantis",
+      subtitle: "Agents IA de niveau entreprise construits sur trois piliers fondamentaux",
       features: [
         {
           icon: Shield,
-          title: "Aucune Plateforme Supplémentaire",
-          description: "Évitez les licences de logiciels RPA et les déploiements complexes. Déployez facilement des agents dans votre cloud privé ou laissez Feranse l'héberger pour vous."
+          title: "Sécurité",
+          description: "Nos agents fonctionnent comme des services conteneurisés déployables partout — sur site dans votre propre environnement de conteneurs ou hébergés dans le cloud en SaaS par Feranse. Apportez vos propres clés API LLM ou utilisez notre inférence. Gérez vos agents IA comme des employés réguliers via vos systèmes IAM existants comme Active Directory, avec un contrôle d'accès complet basé sur les rôles."
         },
         {
-          icon: TrendingUp,
-          title: "Résultats Garantis",
-          description: "Chaque agent est contractuellement lié à l'atteinte de son objectif défini avec une transparence et une responsabilité totales."
-        },
-        {
-          icon: Settings,
-          title: "Évolutif et Flexible",
-          description: "Ajoutez, modifiez ou retirez des agents facilement selon l'évolution de vos besoins. Aucun verrouillage de plateforme ou migration complexe."
+          icon: RefreshCw,
+          title: "Consistance",
+          description: "Notre moteur IA adaptatif répare automatiquement les processus en cours d'exécution lorsqu'ils tombent en panne, guidé par les objectifs métier définis pour chaque agent. Une surveillance et un suivi approfondis vous offrent une vue constante et en temps réel de chaque étape d'exécution de votre travail numérique — rien ne passe entre les mailles du filet."
         },
         {
           icon: Zap,
-          title: "Coût Prévisible",
-          description: "Frais mensuels fixes par agent—aucun dépassement surprise. Budgétisez en toute confiance et évoluez selon vos besoins."
-        },
-        {
-          icon: Clock,
-          title: "Déploiement Rapide",
-          description: "Agents configurés et en ligne dans les 4 semaines. De la conception au déploiement, nous gérons tout le processus."
-        },
-        {
-          icon: FileText,
-          title: "Transparence Totale",
-          description: "Rapports détaillés d'utilisation et de performance avec amélioration continue et mises à jour de fonctionnalités incluses."
+          title: "Rapide",
+          description: "Livraison ultra-rapide de la conception au déploiement. Nos agents font gagner des heures de clics ERP répétitifs chaque jour à votre équipe. Nous nous engageons à faire gagner du temps aux entreprises grâce à l'automatisation des clics — de la rapidité de déploiement et de correction à l'exécution du travail, pour que votre équipe puisse se concentrer sur ce qui compte le plus."
         }
       ]
     }
@@ -94,7 +64,7 @@ const Features = ({ language }: FeaturesProps) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {content[language].features.map((feature, index) => (
             <Card key={index} className="border border-purple-100 hover:border-purple-200 transition-colors">
               <CardHeader className="text-center">
