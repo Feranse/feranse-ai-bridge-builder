@@ -1,9 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle, Target, TrendingUp } from "lucide-react";
 
 interface CustomerStoryProps {
-  language: 'en' | 'fr';
+  language: "en" | "fr";
 }
 
 const CustomerStory = ({ language }: CustomerStoryProps) => {
@@ -13,20 +12,22 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       subtitle: "How we automated product and Bill of Materials creation in a manufacturing ERP",
       challenge: {
         title: "Challenge",
-        description: "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens — repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
+        description:
+          "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens — repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
         details: [
           "ERP: Manufacturing Cloud ERP",
           "Process: Product creation followed by BoM assembly",
-          "Gap: Hours of manual clicks and data entry for each new product and its BoM"
-        ]
+          "Gap: Hours of manual clicks and data entry for each new product and its BoM",
+        ],
       },
       solution: {
         title: "Solution: The Product & BoM Agent",
-        objective: "Automatically create products in the ERP and assemble their Bills of Materials — eliminating repetitive manual data entry.",
+        objective:
+          "Automatically create products in the ERP and assemble their Bills of Materials — eliminating repetitive manual data entry.",
         design: [
           "Reads product specifications from source data and creates the product record in the ERP",
           "Automatically builds the Bill of Materials with components, quantities, and sourcing details",
-          "Validates all entries against business rules before committing changes"
+          "Validates all entries against business rules before committing changes",
         ],
       },
       results: {
@@ -35,8 +36,8 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           "Complete Automation: Zero manual clicks for product and BoM creation",
           "Productivity: Hours of repetitive data entry eliminated — team refocused on engineering and design",
           "Accuracy & Compliance: Eliminated human errors in BoM assembly with built-in validation",
-          "Speed: New products with full BoMs created in minutes instead of hours"
-        ]
+          "Speed: New products with full BoMs created in minutes instead of hours",
+        ],
       },
     },
     fr: {
@@ -44,20 +45,22 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       subtitle: "Comment nous avons automatisé la création de produits et de nomenclatures dans un ERP manufacturier",
       challenge: {
         title: "Défi",
-        description: "Un client manufacturier devait créer de nouveaux produits dans son système ERP puis construire des nomenclatures (BoM) détaillées pour chaque produit. Ce processus nécessitait une saisie manuelle extensive sur plusieurs écrans — des clics répétitifs, du copier-coller de spécifications et la consultation croisée de données fournisseurs.",
+        description:
+          "Un client manufacturier devait créer de nouveaux produits dans son système ERP puis construire des nomenclatures (BoM) détaillées pour chaque produit. Ce processus nécessitait une saisie manuelle extensive sur plusieurs écrans — des clics répétitifs, du copier-coller de spécifications et la consultation croisée de données fournisseurs.",
         details: [
           "ERP : ERP Cloud Manufacturier",
           "Processus : Création de produit suivie de l'assemblage de la nomenclature",
-          "Lacune : Des heures de clics manuels et de saisie de données pour chaque nouveau produit et sa nomenclature"
-        ]
+          "Lacune : Des heures de clics manuels et de saisie de données pour chaque nouveau produit et sa nomenclature",
+        ],
       },
       solution: {
         title: "Solution : L'Agent Produit & Nomenclature",
-        objective: "Créer automatiquement des produits dans l'ERP et assembler leurs nomenclatures — en éliminant la saisie manuelle répétitive.",
+        objective:
+          "Créer automatiquement des produits dans l'ERP et assembler leurs nomenclatures — en éliminant la saisie manuelle répétitive.",
         design: [
           "Lit les spécifications produit à partir des données sources et crée l'enregistrement produit dans l'ERP",
           "Construit automatiquement la nomenclature avec les composants, quantités et détails d'approvisionnement",
-          "Valide toutes les entrées selon les règles métier avant de valider les changements"
+          "Valide toutes les entrées selon les règles métier avant de valider les changements",
         ],
       },
       results: {
@@ -66,36 +69,18 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           "Automatisation Complète : Zéro clic manuel pour la création de produits et de nomenclatures",
           "Productivité : Des heures de saisie répétitive éliminées — l'équipe recentrée sur l'ingénierie et la conception",
           "Précision et Conformité : Élimination des erreurs humaines dans l'assemblage des nomenclatures grâce à la validation intégrée",
-          "Rapidité : Nouveaux produits avec nomenclatures complètes créés en minutes au lieu d'heures"
-        ]
+          "Rapidité : Nouveaux produits avec nomenclatures complètes créés en minutes au lieu d'heures",
+        ],
       },
-    }
+    },
   };
 
   return (
     <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {content[language].title}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {content[language].subtitle}
-          </p>
-        </div>
-        
-        {/* YouTube Video Embed */}
-        <div className="mb-12 max-w-4xl mx-auto">
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/eGb4iu90vm4"
-              title="Customer Success Story Video"
-              className="absolute inset-0 w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{content[language].title}</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{content[language].subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -163,6 +148,20 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
               </ul>
             </CardContent>
           </Card>
+        </div>
+
+        {/* YouTube Video Embed */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://youtu.be/_SYGE8iYyEM"
+              title="Customer Success Story Video"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
