@@ -27,7 +27,7 @@ const CalendarButton = () => {
       if (buttonRef.current && (window as any).calendar?.schedulingButton) {
         buttonRef.current.innerHTML = '';
         (window as any).calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ20FcG0ptZMsPnGoASbx3UKDTBBKdLrATZJns_kD5VpZKw3-W15iu2skRoxaJtqCN7WctpW7V2-?gv=true',
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2AHT2d0iQ9lq60Q2oTNt1W9iyifal8QG3vygQWv53aSeKtgCqNVcqGlhz8QaTVE8Pr8F_u48bi?gv=true',
           color: '#039BE5',
           label: 'Book an appointment',
           target: buttonRef.current,
