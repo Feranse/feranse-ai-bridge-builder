@@ -84,6 +84,20 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
           </p>
         </div>
         
+        {/* YouTube Video Embed */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/eGb4iu90vm4"
+              title="Customer Success Story Video"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Challenge */}
           <Card className="border border-red-200">
@@ -149,20 +163,6 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
               </ul>
             </CardContent>
           </Card>
-        </div>
-
-        {/* YouTube Video Embed */}
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/eGb4iu90vm4"
-              title="Customer Success Story Video"
-              className="absolute inset-0 w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
         </div>
       </div>
     </section>
