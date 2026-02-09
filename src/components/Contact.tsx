@@ -170,9 +170,8 @@ Message: ${formData.message}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div>
-            <Card>
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch max-w-6xl mx-auto">
+            <Card className="flex-1 max-w-md">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">{content[language].cardtitle}</CardTitle>
               </CardHeader>
@@ -192,8 +191,8 @@ Message: ${formData.message}
               </CardContent>
             </Card>
 
-            <Card className="mt-6">
-              <CardContent className="pt-6 text-center space-y-4">
+            <Card className="flex-1 max-w-md">
+              <CardContent className="pt-6 text-center space-y-4 h-full flex flex-col justify-center">
                 <h3 className="text-xl font-semibold text-gray-900">{content[language].bookTitle}</h3>
                 <p className="text-gray-600">{content[language].bookMessage1}<br />{content[language].bookMessage2}</p>
                 <div className="flex justify-center pt-2">
@@ -201,7 +200,6 @@ Message: ${formData.message}
                 </div>
               </CardContent>
             </Card>
-          </div>
         </div>
       </div>
     </section>
