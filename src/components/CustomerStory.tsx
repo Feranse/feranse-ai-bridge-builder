@@ -13,7 +13,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       challenge: {
         title: "Challenge",
         description:
-          "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens — repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
+          "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens with repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
         details: [
           "ERP: Manufacturing Cloud ERP",
           "Process: Product creation followed by BoM assembly",
@@ -23,7 +23,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       solution: {
         title: "Solution: The Product & BoM Agent",
         objective:
-          "Automatically create products in the ERP and assemble their Bills of Materials — eliminating repetitive manual data entry.",
+          "Automatically create products in the ERP and assemble their Bills of Materials (BoMs) eliminating repetitive manual data entry.",
         design: [
           "Reads product specifications from source data and creates the product record in the ERP",
           "Automatically builds the Bill of Materials with components, quantities, and sourcing details",
@@ -163,7 +163,6 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
             </CardContent>
           </Card>
         </div>
-
       </div>
     </section>
   );
