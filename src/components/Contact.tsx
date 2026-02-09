@@ -25,6 +25,7 @@ const CalendarButton = () => {
     script.async = true;
     script.onload = () => {
       if (buttonRef.current && (window as any).calendar?.schedulingButton) {
+        buttonRef.current.innerHTML = '';
         (window as any).calendar.schedulingButton.load({
           url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ20FcG0ptZMsPnGoASbx3UKDTBBKdLrATZJns_kD5VpZKw3-W15iu2skRoxaJtqCN7WctpW7V2-?gv=true',
           color: '#039BE5',
@@ -36,6 +37,9 @@ const CalendarButton = () => {
     document.head.appendChild(script);
 
     return () => {
+      if (buttonRef.current) {
+        buttonRef.current.innerHTML = '';
+      }
       document.head.removeChild(link);
       document.head.removeChild(script);
     };
