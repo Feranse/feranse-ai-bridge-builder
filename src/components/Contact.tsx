@@ -77,7 +77,7 @@ const Contact = ({ language }: ContactProps) => {
       },
       bookTitle: "Book a Meeting With Us Today!",
       bookMessage:
-        "Let's discuss how Feranse can help automate your repetitive ERP tasks and digital labour.\n No consulting fees, no change management required.",
+        "Let's discuss how Feranse can help automate your repetitive ERP tasks and digital labour.\nNo consulting fees, no change management required.",
       success: "Message sent successfully! We'll get back to you soon.",
       error: "Failed to send message. Please try again.",
     },
