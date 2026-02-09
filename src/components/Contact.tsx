@@ -77,7 +77,8 @@ const Contact = ({ language }: ContactProps) => {
         address: "Montreal, Quebec, Canada"
       },
       bookTitle: "Book a Meeting With Us Today!",
-      bookMessage: "Let's discuss how Feranse can help automate your repetitive ERP tasks and digital labour. No consulting fees, no change management required.",
+      bookMessage1: "Let's discuss how Feranse can help automate your repetitive ERP tasks and digital labour.",
+      bookMessage2: "No consulting fees, no change management required.",
       success: "Message sent successfully! We'll get back to you soon.",
       error: "Failed to send message. Please try again."
     },
@@ -99,7 +100,8 @@ const Contact = ({ language }: ContactProps) => {
         address: "Montréal, Québec, Canada"
       },
       bookTitle: "Réservez une Rencontre Avec Nous Aujourd'hui!",
-      bookMessage: "Discutons de la façon dont Feranse peut vous aider à automatiser vos tâches ERP répétitives et votre travail numérique. Sans frais de consultation ni gestion du changement.",
+      bookMessage1: "Discutons de la façon dont Feranse peut vous aider à automatiser vos tâches ERP répétitives et votre travail numérique.",
+      bookMessage2: "Sans frais de consultation ni gestion du changement.",
       success: "Message envoyé avec succès! Nous vous répondrons bientôt.",
       error: "Échec de l'envoi du message. Veuillez réessayer."
     }
@@ -193,7 +195,7 @@ Message: ${formData.message}
             <Card className="mt-6">
               <CardContent className="pt-6 text-center space-y-4">
                 <h3 className="text-xl font-semibold text-gray-900">{content[language].bookTitle}</h3>
-                <p className="text-gray-600">{content[language].bookMessage}</p>
+                <p className="text-gray-600">{content[language].bookMessage1}<br />{content[language].bookMessage2}</p>
                 <div className="flex justify-center pt-2">
                   <CalendarButton />
                 </div>
