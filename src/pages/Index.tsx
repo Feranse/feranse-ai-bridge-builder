@@ -14,10 +14,10 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header language={language} setLanguage={setLanguage} />
       <Hero language={language} />
-      <Features language={language} />
       <div id="story">
         <CustomerStory language={language} />
       </div>
+      <Features language={language} />
       <Contact language={language} />
       <Footer language={language} />
     </div>
