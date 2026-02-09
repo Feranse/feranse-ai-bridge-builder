@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,39 @@ import { useToast } from "@/hooks/use-toast";
 interface ContactProps {
   language: 'en' | 'fr';
 }
+
+const CalendarButton = () => {
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    const script = document.createElement('script');
+    script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
+    script.async = true;
+    script.onload = () => {
+      if (buttonRef.current && (window as any).calendar?.schedulingButton) {
+        (window as any).calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ20FcG0ptZMsPnGoASbx3UKDTBBKdLrATZJns_kD5VpZKw3-W15iu2skRoxaJtqCN7WctpW7V2-?gv=true',
+          color: '#039BE5',
+          label: 'Book an appointment',
+          target: buttonRef.current,
+        });
+      }
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(link);
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  return <div ref={buttonRef} />;
+};
 
 const Contact = ({ language }: ContactProps) => {
   const [formData, setFormData] = useState({
@@ -157,15 +190,8 @@ Message: ${formData.message}
             </Card>
           </div>
           
-          <div>
-            <iframe
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ20FcG0ptZMsPnGoASbx3UKDTBBKdLrATZJns_kD5VpZKw3-W15iu2skRoxaJtqCN7WctpW7V2-?gv=true"
-              style={{ border: 0 }}
-              width="100%"
-              height="600"
-              frameBorder="0"
-              title="Book an Appointment"
-            ></iframe>
+          <div className="flex items-center justify-center">
+            <CalendarButton />
           </div>
         </div>
       </div>
