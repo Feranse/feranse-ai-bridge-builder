@@ -158,56 +158,14 @@ Message: ${formData.message}
           </div>
           
           <div>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold">{content[language].secondcardtitle}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <Input 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder={content[language].form.name}
-                    className="w-full"
-                    required
-                  />
-                  <Input 
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder={content[language].form.email}
-                    className="w-full"
-                    required
-                  />
-                  <Input 
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    placeholder={content[language].form.company}
-                    className="w-full"
-                    required
-                  />
-                  <Textarea 
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder={content[language].form.message}
-                    rows={4}
-                    className="w-full resize-none"
-                    required
-                  />
-                  <Button 
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600"
-                  >
-                    {isSubmitting ? "Sending..." : content[language].form.submit}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ20FcG0ptZMsPnGoASbx3UKDTBBKdLrATZJns_kD5VpZKw3-W15iu2skRoxaJtqCN7WctpW7V2-?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              frameBorder="0"
+              title="Book an Appointment"
+            ></iframe>
           </div>
         </div>
       </div>
