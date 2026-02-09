@@ -13,7 +13,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       challenge: {
         title: "Challenge",
         description:
-          "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens with repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
+          "A manufacturing client needed to create new products in their ERP system and then build detailed Bills of Materials (BoMs) for each product. This process required extensive manual data entry across multiple screens — repetitive clicks, copy-pasting specifications, and cross-referencing supplier data.",
         details: [
           "ERP: Manufacturing Cloud ERP",
           "Process: Product creation followed by BoM assembly",
@@ -22,8 +22,9 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       },
       solution: {
         title: "Solution: The Product & BoM Agent",
+        subtitle: "Agent Design",
         objective:
-          "Automatically create products in the ERP and assemble their Bills of Materials (BoMs) eliminating repetitive manual data entry.",
+          "Automatically create products in the ERP and assemble their Bills of Materials — eliminating repetitive manual data entry.",
         design: [
           "Reads product specifications from source data and creates the product record in the ERP",
           "Automatically builds the Bill of Materials with components, quantities, and sourcing details",
@@ -42,7 +43,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
     },
     fr: {
       title: "Histoire de Réussite Client",
-      subtitle: "Comment nous avons automatisé la création de produits et de nomenclatures dans un ERP manufacturier",
+      subtitle: "Comment nous avons automatisé la création de produits et de nomenclatures dans un ERP manufacturier.",
       challenge: {
         title: "Défi",
         description:
@@ -50,11 +51,12 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
         details: [
           "ERP : ERP Cloud Manufacturier",
           "Processus : Création de produit suivie de l'assemblage de la nomenclature",
-          "Lacune : Des heures de clics manuels et de saisie de données pour chaque nouveau produit et sa nomenclature",
+          "Lacune : Des heures de clics manuels et de saisie de données pour la création de nouveaux produits",
         ],
       },
       solution: {
         title: "Solution : L'Agent Produit & Nomenclature",
+        subtitle: "Design de l'Agent",
         objective:
           "Créer automatiquement des produits dans l'ERP et assembler leurs nomenclatures — en éliminant la saisie manuelle répétitive.",
         design: [
@@ -66,7 +68,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
       results: {
         title: "Résultats et Valeur",
         achievements: [
-          "Automatisation Complète : Zéro clic manuel pour la création de produits et de nomenclatures",
+          "Automatisation Complète : Zéro clic manuel dans l'ERP pour la création de produits et de nomenclatures",
           "Productivité : Des heures de saisie répétitive éliminées — l'équipe recentrée sur l'ingénierie et la conception",
           "Précision et Conformité : Élimination des erreurs humaines dans l'assemblage des nomenclatures grâce à la validation intégrée",
           "Rapidité : Nouveaux produits avec nomenclatures complètes créés en minutes au lieu d'heures",
@@ -130,7 +132,7 @@ const CustomerStory = ({ language }: CustomerStoryProps) => {
             <CardContent className="space-y-4">
               <p className="text-sm font-medium text-gray-700">{content[language].solution.objective}</p>
               <div>
-                <p className="text-sm font-medium text-gray-700 mb-2">Agent Design:</p>
+                <p className="text-sm font-medium text-gray-700 mb-2">{content[language].solution.subtitle}</p>
                 <ul className="space-y-1">
                   {content[language].solution.design.map((item, index) => (
                     <li key={index} className="text-sm text-gray-600 flex items-start">
