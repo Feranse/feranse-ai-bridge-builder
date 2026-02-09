@@ -16,7 +16,7 @@ const Hero = ({ language }: HeroProps) => {
     },
     fr: {
       tagline: "Agence IA - Montréal, Québec",
-      headline: "Fatigué que votre équipe passe des heures sur les mêmes clics ERP chaque jour?",
+      headline: "Trop de clics dans votre ERP tous les jours?",
       subheadline: "Feranse les fait pour vous automatiquement.",
       description:
         "Moins de saisie de données, plus de travail accompli. Aucun frais de consultation, aucune gestion du changement, aucune nouvelle application.",
