@@ -69,10 +69,11 @@ const Contact = ({ language }: ContactProps) => {
       },
       info: {
         email: "contact@feranse.com",
-        phone: "N/A",
+        phone: "+1 (514) 000-0000",
         address: "Montreal, Quebec, Canada"
       },
-      cta: "Schedule a free consultation to see how Feranse can eliminate your digital gaps.",
+      bookTitle: "Book an Appointment With Us",
+      bookMessage: "Let's discuss how we can automate your repetitive ERP tasks and eliminate digital gaps—no consulting fees, no change management required.",
       success: "Message sent successfully! We'll get back to you soon.",
       error: "Failed to send message. Please try again."
     },
@@ -90,10 +91,11 @@ const Contact = ({ language }: ContactProps) => {
       },
       info: {
         email: "contact@feranse.com",
-        phone: "N/A",
+        phone: "+1 (514) 000-0000",
         address: "Montréal, Québec, Canada"
       },
-      cta: "Planifiez une consultation gratuite pour voir comment Feranse peut éliminer vos lacunes numériques.",
+      bookTitle: "Prenez Rendez-vous Avec Nous",
+      bookMessage: "Discutons de la façon dont nous pouvons automatiser vos tâches ERP répétitives et éliminer vos lacunes numériques—sans frais de consultation ni gestion du changement.",
       success: "Message envoyé avec succès! Nous vous répondrons bientôt.",
       error: "Échec de l'envoi du message. Veuillez réessayer."
     }
@@ -173,25 +175,26 @@ Message: ${formData.message}
                   <Mail className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.email}</span>
                 </div>
-                {/* <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.phone}</span>
-                </div> */}
+                </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">{content[language].info.address}</span>
                 </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-gray-600 italic">
-                    {content[language].cta}
-                  </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mt-6">
+              <CardContent className="pt-6 text-center space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">{content[language].bookTitle}</h3>
+                <p className="text-gray-600">{content[language].bookMessage}</p>
+                <div className="flex justify-center pt-2">
+                  <CalendarButton />
                 </div>
               </CardContent>
             </Card>
-          </div>
-          
-          <div className="flex items-center justify-center">
-            <CalendarButton />
           </div>
         </div>
       </div>
