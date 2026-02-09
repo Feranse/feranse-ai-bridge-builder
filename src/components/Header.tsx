@@ -48,11 +48,11 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">
-              {content[language].nav.features}
-            </a>
             <a href="#story" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.story}
+            </a>
+            <a href="#features" className="text-gray-700 hover:text-purple-600 transition-colors">
+              {content[language].nav.features}
             </a>
             <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">
               {content[language].nav.contact}
