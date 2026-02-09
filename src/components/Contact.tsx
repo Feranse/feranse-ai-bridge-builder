@@ -72,8 +72,8 @@ const Contact = ({ language }: ContactProps) => {
         phone: "+1 (514) 000-0000",
         address: "Montreal, Quebec, Canada"
       },
-      bookTitle: "Book an Appointment With Us",
-      bookMessage: "Let's discuss how we can automate your repetitive ERP tasks and eliminate digital gaps—no consulting fees, no change management required.",
+      bookTitle: "Book a Meeting With Us Today!",
+      bookMessage: "Let's discuss how Feranse can help automate your repetitive ERP tasks and digital labour. No consulting fees, no change management required.",
       success: "Message sent successfully! We'll get back to you soon.",
       error: "Failed to send message. Please try again."
     },
@@ -94,8 +94,8 @@ const Contact = ({ language }: ContactProps) => {
         phone: "+1 (514) 000-0000",
         address: "Montréal, Québec, Canada"
       },
-      bookTitle: "Prenez Rendez-vous Avec Nous",
-      bookMessage: "Discutons de la façon dont nous pouvons automatiser vos tâches ERP répétitives et éliminer vos lacunes numériques—sans frais de consultation ni gestion du changement.",
+      bookTitle: "Réservez une Rencontre Avec Nous Aujourd'hui!",
+      bookMessage: "Discutons de la façon dont Feranse peut vous aider à automatiser vos tâches ERP répétitives et votre travail numérique. Sans frais de consultation ni gestion du changement.",
       success: "Message envoyé avec succès! Nous vous répondrons bientôt.",
       error: "Échec de l'envoi du message. Veuillez réessayer."
     }
