@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+import logoTextAsset from "@/assets/feranse-logo-text.png.asset.json";
 
 interface HeaderProps {
   language: 'en' | 'fr';
@@ -36,14 +37,11 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="flex items-center mr-3">
-              <img 
-                src="/lovable-uploads/3efa52b7-fe43-44f9-bb80-eeef5bb4f86d.png" 
-                alt="Feranse Logo" 
-                className="h-12 w-12"
-              />
-            </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{content[language].company}</h1>
+            <img
+              src={logoTextAsset.url}
+              alt="Feranse"
+              className="h-10 w-auto"
+            />
             {/* <span className="ml-2 text-sm text-gray-500">Montreal, QC</span> */}
           </div>
           
